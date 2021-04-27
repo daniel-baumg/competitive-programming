@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> adj[100000];
+vector<int> adj[100];
 
 int main() {
     ifstream fin("revegetate.in");
