@@ -1,3 +1,3 @@
-# Practice for the USA Computing Olympiad (C++)
+# USA Computing Olympiad Solutions (C++)
 
 https://daniel-baumg.github.io/competitive-programming/
