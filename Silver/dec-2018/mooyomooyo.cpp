@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool gravity(string grid[], int n) {
+int n;
+string grid[100];
+
+bool gravity() {
     bool changed = false;
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < 10; j++) {
@@ -15,7 +18,7 @@ bool gravity(string grid[], int n) {
     return changed;
 }
 
-int area(string grid[], bool visited[100][10], int i, int j, int n) {
+int area(bool visited[100][10], int i, int j) {
     int a = 0;
     char c = grid[i][j];
     queue<pair<int, int>> q;
@@ -37,7 +40,7 @@ int area(string grid[], bool visited[100][10], int i, int j, int n) {
     return a;
 }
 
-void erase(string grid[], int i, int j, int n) {
+void erase(int i, int j) {
     char c = grid[i][j];
     queue<pair<int, int>> q;
     q.push(make_pair(i, j));
@@ -58,26 +61,25 @@ int main() {
     ifstream fin("mooyomooyo.in");
     ofstream fout("mooyomooyo.out");
 
-    int n, k;
+    int k;
     fin >> n >> k;
-    string grid[100];
     for (int i = 0; i < n; i++)
         fin >> grid[i];
 
     do {
-        while (gravity(grid, n))
+        while (gravity())
             continue;
         bool visited[100][10] = {};
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 10; j++) {
                 if (visited[i][j] || grid[i][j] == '0')
                     continue;
-                int a = area(grid, visited, i, j, n);
+                int a = area(visited, i, j);
                 if (a >= k)
-                    erase(grid, i, j, n);
+                    erase(i, j);
             }
         }
-    } while (gravity(grid, n));
+    } while (gravity());
 
     for (int i = 0; i < n; i++)
         fout << grid[i] << endl;
