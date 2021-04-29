@@ -24,6 +24,5 @@ int main() {
     int ans = 0;
     for (int i = 0; i < 100; i++)
         ans = max(ans, speed_bessie[i] - speed_limit[i]);
-
     fout << ans << endl;
 }
