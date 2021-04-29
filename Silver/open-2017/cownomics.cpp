@@ -10,6 +10,7 @@ int main() {
     string genomes[1000];
     for (int i = 0; i < 2 * n; i++)
         fin >> genomes[i];
+
     int ans = 0;
     for (int i = 0; i < m; i++) {
         for (int j = i + 1; j < m; j++) {
