@@ -12,22 +12,14 @@ int num_distinct(string s) {
 }
 
 bool wins(char c) {
-    if (c == board[0][0] && c == board[0][1] && c == board[0][2])
-        return true;
-    if (c == board[1][0] && c == board[1][1] && c == board[1][2])
-        return true;
-    if (c == board[2][0] && c == board[2][1] && c == board[2][2])
-        return true;
-    if (c == board[0][0] && c == board[1][0] && c == board[2][0])
-        return true;
-    if (c == board[0][1] && c == board[1][1] && c == board[2][1])
-        return true;
-    if (c == board[0][2] && c == board[1][2] && c == board[2][2])
-        return true;
-    if (c == board[0][0] && c == board[1][1] && c == board[2][2])
-        return true;
-    if (c == board[0][2] && c == board[1][1] && c == board[2][0])
-        return true;
+    if (c == board[0][0] && c == board[0][1] && c == board[0][2]) return true;
+    if (c == board[1][0] && c == board[1][1] && c == board[1][2]) return true;
+    if (c == board[2][0] && c == board[2][1] && c == board[2][2]) return true;
+    if (c == board[0][0] && c == board[1][0] && c == board[2][0]) return true;
+    if (c == board[0][1] && c == board[1][1] && c == board[2][1]) return true;
+    if (c == board[0][2] && c == board[1][2] && c == board[2][2]) return true;
+    if (c == board[0][0] && c == board[1][1] && c == board[2][2]) return true;
+    if (c == board[0][2] && c == board[1][1] && c == board[2][0]) return true;
     return false;
 }
 
@@ -46,22 +38,14 @@ bool wins(char c1, char c2) {
     string s6 = string(1, board[0][2]) + board[1][2] + board[2][2];
     string s7 = string(1, board[0][0]) + board[1][1] + board[2][2];
     string s8 = string(1, board[0][2]) + board[1][1] + board[2][0];
-    if (c == board_replaced[0][0] && c == board_replaced[0][1] && c == board_replaced[0][2] && num_distinct(s1) == 2)
-        return true;
-    if (c == board_replaced[1][0] && c == board_replaced[1][1] && c == board_replaced[1][2] && num_distinct(s2) == 2)
-        return true;
-    if (c == board_replaced[2][0] && c == board_replaced[2][1] && c == board_replaced[2][2] && num_distinct(s3) == 2)
-        return true;
-    if (c == board_replaced[0][0] && c == board_replaced[1][0] && c == board_replaced[2][0] && num_distinct(s4) == 2)
-        return true;
-    if (c == board_replaced[0][1] && c == board_replaced[1][1] && c == board_replaced[2][1] && num_distinct(s5) == 2)
-        return true;
-    if (c == board_replaced[0][2] && c == board_replaced[1][2] && c == board_replaced[2][2] && num_distinct(s6) == 2)
-        return true;
-    if (c == board_replaced[0][0] && c == board_replaced[1][1] && c == board_replaced[2][2] && num_distinct(s7) == 2)
-        return true;
-    if (c == board_replaced[0][2] && c == board_replaced[1][1] && c == board_replaced[2][0] && num_distinct(s8) == 2)
-        return true;
+    if (c == board_replaced[0][0] && c == board_replaced[0][1] && c == board_replaced[0][2] && num_distinct(s1) == 2) return true;
+    if (c == board_replaced[1][0] && c == board_replaced[1][1] && c == board_replaced[1][2] && num_distinct(s2) == 2) return true;
+    if (c == board_replaced[2][0] && c == board_replaced[2][1] && c == board_replaced[2][2] && num_distinct(s3) == 2) return true;
+    if (c == board_replaced[0][0] && c == board_replaced[1][0] && c == board_replaced[2][0] && num_distinct(s4) == 2) return true;
+    if (c == board_replaced[0][1] && c == board_replaced[1][1] && c == board_replaced[2][1] && num_distinct(s5) == 2) return true;
+    if (c == board_replaced[0][2] && c == board_replaced[1][2] && c == board_replaced[2][2] && num_distinct(s6) == 2) return true;
+    if (c == board_replaced[0][0] && c == board_replaced[1][1] && c == board_replaced[2][2] && num_distinct(s7) == 2) return true;
+    if (c == board_replaced[0][2] && c == board_replaced[1][1] && c == board_replaced[2][0] && num_distinct(s8) == 2) return true;
     return false;
 }
 
