@@ -10,6 +10,7 @@ int main() {
     string words[100];
     for (int i = 0; i < n; i++)
         fin >> words[i];
+
     int len = 0;
     string line = "";
     for (int i = 0; i < n; i++) {
