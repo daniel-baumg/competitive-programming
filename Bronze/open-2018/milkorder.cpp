@@ -28,29 +28,29 @@ int main() {
     if (in_hierarchy) {
         int idx = 0;
         while (!d.empty()) {
-            int cow = d.front();
+            int cur = d.front();
             d.pop_front();
-            if (fixed.count(cow) == 1) {
-                while (order[idx] != cow)
+            if (fixed.count(cur) == 1) {
+                while (order[idx] != cur)
                     idx += 1;
             } else {
                 while (order[idx] != 0)
                     idx += 1;
-                order[idx] = cow;
+                order[idx] = cur;
             }
         }
     } else {
         int idx = n - 1;
         while (!d.empty()) {
-            int cow = d.back();
+            int cur = d.back();
             d.pop_back();
-            if (fixed.count(cow) == 1) {
-                while (order[idx] != cow)
+            if (fixed.count(cur) == 1) {
+                while (order[idx] != cur)
                     idx -= 1;
             } else {
                 while (order[idx] != 0)
                     idx -= 1;
-                order[idx] = cow;
+                order[idx] = cur;
             }
         }
     }
