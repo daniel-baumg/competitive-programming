@@ -11,6 +11,7 @@ int main() {
     for (int i = 0; i < n; i++)
         fin >> diamonds[i];
     sort(diamonds, diamonds + n);
+
     int ans = 0;
     for (int i = 0; i < n; i++) {
         int idx = i;
