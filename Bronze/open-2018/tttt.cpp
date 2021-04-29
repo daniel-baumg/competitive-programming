@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+string board[3];
+
 int num_distinct(string s) {
     if (s[0] == s[1] && s[1] == s[2])
         return 1;
@@ -9,7 +11,7 @@ int num_distinct(string s) {
     return 3;
 }
 
-bool wins(string board[3], char c) {
+bool wins(char c) {
     if (c == board[0][0] && c == board[0][1] && c == board[0][2])
         return true;
     if (c == board[1][0] && c == board[1][1] && c == board[1][2])
@@ -29,7 +31,7 @@ bool wins(string board[3], char c) {
     return false;
 }
 
-bool wins(string board[3], char c1, char c2) {
+bool wins(char c1, char c2) {
     char c = '.';
     string board_replaced[3] = {board[0], board[1], board[2]};
     for (int i = 0; i < 3; i++)
@@ -67,20 +69,19 @@ int main() {
     ifstream fin("tttt.in");
     ofstream fout("tttt.out");
 
-    string board[3];
     fin >> board[0] >> board[1] >> board[2];
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     int ans = 0;
     for (int i = 0; i < 26; i++)
-        if (wins(board, alphabet[i]))
+        if (wins(alphabet[i]))
             ans += 1;
     fout << ans << endl;
 
     ans = 0;
     for (int i = 0; i < 26; i++)
         for (int j = i + 1; j < 26; j++)
-            if (wins(board, alphabet[i], alphabet[j]))
+            if (wins(alphabet[i], alphabet[j]))
                 ans += 1;
     fout << ans << endl;
 }
