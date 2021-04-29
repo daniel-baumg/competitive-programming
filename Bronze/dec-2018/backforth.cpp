@@ -42,6 +42,5 @@ int main() {
     for (int i = 0; i < 2000; i++)
         if (possible[i])
             ans += 1;
-
     fout << ans << endl;
 }
