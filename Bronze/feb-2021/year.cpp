@@ -9,16 +9,14 @@ int convert(string s) {
     return -1;
 }
 
-int next(string s, int year) {
-    int val = convert(s);
+int next(int val, int year) {
     year += 1;
     while (year % 12 != val)
         year += 1;
     return year;
 }
 
-int prev(string s, int year) {
-    int val = convert(s);
+int prev(int val, int year) {
     year -= 1;
     while (year % 12 != val)
         year -= 1;
@@ -34,9 +32,9 @@ int main() {
         string cow1, cow2, type, animal;
         cin >> cow1 >> type >> type >> type >> animal >> cow2 >> cow2 >> cow2;
         if (type == "previous")
-            m[cow1] = prev(animal, m[cow2]);
+            m[cow1] = prev(convert(animal), m[cow2]);
         else
-            m[cow1] = next(animal, m[cow2]);
+            m[cow1] = next(convert(animal), m[cow2]);
     }
     cout << abs(m["Bessie"] - m["Elsie"]) << endl;
 }
