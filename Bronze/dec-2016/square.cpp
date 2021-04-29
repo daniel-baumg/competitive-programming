@@ -12,6 +12,5 @@ int main() {
     int y1 = min(p1y1, p2y1);
     int y2 = max(p1y2, p2y2);
     int side = max(x2 - x1, y2 - y1);
-
     fout << side * side << endl;
 }
