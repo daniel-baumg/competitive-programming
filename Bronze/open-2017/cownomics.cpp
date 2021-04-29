@@ -10,6 +10,7 @@ int main() {
     string genomes[200];
     for (int i = 0; i < 2 * n; i++)
         fin >> genomes[i];
+
     int ans = 0;
     for (int i = 0; i < m; i++) {
         set<char> spots, plain;
