@@ -30,6 +30,5 @@ int main() {
             }
         }
     }
-
     fout << ans << endl;
 }
