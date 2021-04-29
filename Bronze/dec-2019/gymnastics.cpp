@@ -11,6 +11,7 @@ int main() {
     for (int i = 0; i < k; i++)
         for (int j = 0; j < n; j++)
             fin >> rankings[i][j];
+
     int ans = 0;
     for (int a = 0; a < n; a++) {
         for (int b = 0; b < n; b++) {
