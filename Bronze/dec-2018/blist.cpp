@@ -35,6 +35,5 @@ int main() {
             active -= b[idx];
         ans = max(ans, active);
     }
-
     fout << ans << endl;
 }
