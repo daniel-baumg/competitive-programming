@@ -38,11 +38,13 @@ int main() {
         fin >> l >> r;
         reverse(l - 1, r - 1);
     }
+
     for (int i = 0; i < n; i++)
         merge(i, mapping[i]);
     int len[100000] = {};
     for (int i = 0; i < n; i++)
         len[find(i)] += 1;
+
     int ans[100000];
     fill_n(ans, n, -1);
     for (int i = 0; i < n; i++) {
