@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool lit[100][100] = {};
-bool toggled[100][100] = {};
+bool lit[100][100], toggled[100][100];
 multimap<pair<int, int>, pair<int, int>> mm;
 
 bool illuminate(int n) {
