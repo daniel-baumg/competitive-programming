@@ -34,8 +34,6 @@ int main() {
 
     fill_n(minx, n, INT_MAX);
     fill_n(miny, n, INT_MAX);
-    fill_n(maxx, n, 0);
-    fill_n(maxy, n, 0);
     for (int i = 0; i < n; i++) {
         int root = find(i);
         minx[root] = min(minx[root], x[i]);
