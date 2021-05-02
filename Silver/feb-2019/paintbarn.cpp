@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int barn[1001][1001], prefix[1001][1001];
+int barn[1001][1001] = {};
+int prefix[1001][1001];
 
 int main() {
     ifstream fin("paintbarn.in");
