@@ -5,10 +5,10 @@ bool occupied[1003][1003];
 
 int count(int x, int y) {
     int num = 0;
-    if (occupied[x - 1][y]) num += 1;
     if (occupied[x + 1][y]) num += 1;
-    if (occupied[x][y - 1]) num += 1;
+    if (occupied[x - 1][y]) num += 1;
     if (occupied[x][y + 1]) num += 1;
+    if (occupied[x][y - 1]) num += 1;
     return num;
 }
 
