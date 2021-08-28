@@ -14,10 +14,8 @@ int main() {
         int blocks2[26] = {};
         string word1, word2;
         fin >> word1 >> word2;
-        for (int j = 0; j < word1.length(); j++)
-            blocks1[alphabet.find(word1[j])] += 1;
-        for (int j = 0; j < word2.length(); j++)
-            blocks2[alphabet.find(word2[j])] += 1;
+        for (int j = 0; j < word1.length(); j++) blocks1[alphabet.find(word1[j])] += 1;
+        for (int j = 0; j < word2.length(); j++) blocks2[alphabet.find(word2[j])] += 1;
         for (int j = 0; j < 26; j++)
             result[j] += max(blocks1[j], blocks2[j]);
     }
