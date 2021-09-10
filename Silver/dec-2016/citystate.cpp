@@ -15,7 +15,7 @@ int main() {
     }
 
     int ans = 0;
-    for (pair<pair<string, string>, int> p : m) {
+    for (auto p : m) {
         if (p.first.first == p.first.second)
             continue;
         ans += p.second * m[make_pair(p.first.second, p.first.first)];
