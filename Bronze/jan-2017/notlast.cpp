@@ -23,21 +23,21 @@ int main() {
     }
 
     int m = INT_MAX;
-    for (pair<string, int> x : mapping)
+    for (auto x : mapping)
         m = min(m, x.second);
     int min2 = INT_MAX;
-        for (pair<string, int> x : mapping)
+        for (auto x : mapping)
             if (x.second > m)
                 min2 = min(min2, x.second);
     int count = 0;
-    for (pair<string, int> x : mapping)
+    for (auto x : mapping)
         if (x.second == min2)
             count += 1;
 
     if (count > 1 || count == 0)
         fout << "Tie" << endl;
     else
-        for (pair<string, int> x : mapping)
+        for (auto x : mapping)
             if (x.second == min2)
                 fout << x.first << endl;
 }
