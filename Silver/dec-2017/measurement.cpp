@@ -41,10 +41,10 @@ int main() {
             if (s.size() == 1) {
                 m[id] += change;
                 max_milk = 0;
-                for (pair<int, int> x : m)
+                for (auto x : m)
                     max_milk = max(max_milk, x.second);
                 s.clear();
-                for (pair<int, int> x : m)
+                for (auto x : m)
                     if (x.second == max_milk)
                         s.insert(x.first);
                 if (s.size() > 1 || *s.begin() != id)
