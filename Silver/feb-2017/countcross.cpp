@@ -31,7 +31,7 @@ int main() {
         queue<pair<int, int>> q;
         q.push(cows[i]);
         while (!q.empty()) {
-            pair<int, int> cur = q.front();
+            auto cur = q.front();
             q.pop();
             if (cur.first < 0 || cur.second < 0 || cur.first > 2 * n || cur.second > 2 * n)
                 continue;
