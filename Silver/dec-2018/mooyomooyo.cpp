@@ -24,7 +24,7 @@ int area(bool visited[100][10], int i, int j) {
     queue<pair<int, int>> q;
     q.push(make_pair(i, j));
     while (!q.empty()) {
-        pair<int, int> cur = q.front();
+        auto cur = q.front();
         q.pop();
         if (cur.first < 0 || cur.first >= n || cur.second < 0 || cur.second >= 10 || grid[cur.first][cur.second] != c)
             continue;
@@ -45,7 +45,7 @@ void erase(int i, int j) {
     queue<pair<int, int>> q;
     q.push(make_pair(i, j));
     while (!q.empty()) {
-        pair<int, int> cur = q.front();
+        auto cur = q.front();
         q.pop();
         if (cur.first < 0 || cur.first >= n || cur.second < 0 || cur.second >= 10 || grid[cur.first][cur.second] != c)
             continue;
