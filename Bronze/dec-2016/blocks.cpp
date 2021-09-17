@@ -7,7 +7,7 @@ int main() {
 
     int n;
     fin >> n;
-    int result[26] = {};
+    int ans[26] = {};
     for (int i = 0; i < n; i++) {
         string alphabet = "abcdefghijklmnopqrstuvwxyz";
         int blocks1[26] = {};
@@ -17,9 +17,9 @@ int main() {
         for (int j = 0; j < word1.length(); j++) blocks1[alphabet.find(word1[j])] += 1;
         for (int j = 0; j < word2.length(); j++) blocks2[alphabet.find(word2[j])] += 1;
         for (int j = 0; j < 26; j++)
-            result[j] += max(blocks1[j], blocks2[j]);
+            ans[j] += max(blocks1[j], blocks2[j]);
     }
 
     for (int i = 0; i < 26; i++)
-        fout << result[i] << endl;
+        fout << ans[i] << endl;
 }
