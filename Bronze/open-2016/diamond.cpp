@@ -7,15 +7,15 @@ int main() {
 
     int n, k;
     fin >> n >> k;
-    int diamonds[1000];
+    int d[1000];
     for (int i = 0; i < n; i++)
-        fin >> diamonds[i];
-    sort(diamonds, diamonds + n);
+        fin >> d[i];
+    sort(d, d + n);
 
     int ans = 0;
     for (int i = 0; i < n; i++) {
         int idx = i;
-        while (idx < n && diamonds[idx] - diamonds[i] <= k)
+        while (idx < n && d[idx] - d[i] <= k)
             idx += 1;
         ans = max(ans, idx - i);
     }
