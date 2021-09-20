@@ -14,10 +14,11 @@ int main() {
         cows.push_back(make_pair(arrival, duration));
     }
     sort(cows.begin(), cows.end());
-    int time = 0;
+
+    int ans = 0;
     for (int i = 0; i < n; i++) {
-        time = max(time, cows[i].first);
-        time += cows[i].second;
+        ans = max(ans, cows[i].first);
+        ans += cows[i].second;
     }
-    fout << time << endl;
+    fout << ans << endl;
 }
