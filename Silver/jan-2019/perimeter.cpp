@@ -11,8 +11,7 @@ int main() {
     for (int i = 0; i < n; i++)
         fin >> grid[i];
 
-    int ans_a = 0;
-    int ans_p = 0;
+    int ans[2] = {};
     bool visited[1000][1000] = {};
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -38,13 +37,13 @@ int main() {
                 q.push(make_pair(cur.first, cur.second + 1));
                 q.push(make_pair(cur.first, cur.second - 1));
             }
-            if (a == ans_a)
-                ans_p = min(ans_p, p);
-            if (a > ans_a) {
-                ans_a = a;
-                ans_p = p;
+            if (a == ans[0])
+                ans[1] = min(ans[1], p);
+            if (a > ans[0]) {
+                ans[0] = a;
+                ans[1] = p;
             }
         }
     }
-    fout << ans_a << " " << ans_p << endl;
+    fout << ans[0] << " " << ans[1] << endl;
 }
