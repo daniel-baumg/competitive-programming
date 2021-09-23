@@ -27,12 +27,12 @@ int main() {
         }
     }
 
-    int ans = -2;
+    int ans = -1;
     for (int i = 0; i < n; i++) {
         if (reachable[i] == n) {
-            ans = i;
+            ans = i + 1;
             break;
         }
     }
-    fout << ans + 1 << endl;
+    fout << ans << endl;
 }
