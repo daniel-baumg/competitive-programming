@@ -13,8 +13,8 @@ int main() {
         times[2 * i] = s[i];
         times[2 * i + 1] = t[i];
     }
-
     sort(times, times + 2 * n);
+
     int active = 0;
     int ans = 0;
     for (int i = 0; i < 2 * n; i++) {
