@@ -21,9 +21,9 @@ int main() {
             break;
         if (ans % 2 == 1)
             o -= 1;
-        else if (ans % 2 == 0 && e > 0)
+        else if (e > 0)
             e -= 1;
-        else if (ans % 2 == 0 && e == 0)
+        else if (e == 0)
             o -= 2;
         ans += 1;
     }
