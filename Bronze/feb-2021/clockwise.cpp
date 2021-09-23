@@ -21,7 +21,9 @@ int main() {
             if (turn == "SW") r += 1;
             if (turn == "WN") r += 1;
         }
-        if (l > r) cout << "CCW" << endl;
-        if (l < r) cout << "CW" << endl;
+        if (l > r)
+            cout << "CCW" << endl;
+        else
+            cout << "CW" << endl;
     }
 }
