@@ -18,14 +18,10 @@ int main() {
         int s;
         fin >> d >> s;
         for (int j = 0; j < s; j++) {
-            if (d == "N")
-                y += 1;
-            if (d == "S")
-                y -= 1;
-            if (d == "E")
-                x += 1;
-            if (d == "W")
-                x -= 1;
+            if (d == "N") y += 1;
+            if (d == "S") y -= 1;
+            if (d == "E") x += 1;
+            if (d == "W") x -= 1;
             time += 1;
             grid[x][y].push_back(time);
         }
