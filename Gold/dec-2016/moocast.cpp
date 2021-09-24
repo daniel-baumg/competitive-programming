@@ -26,7 +26,7 @@ int main() {
             for (int i = 0; i < n; i++) {
                 if (i == cur)
                     continue;
-                if (pow(x[i] - x[cur], 2) + pow(y[i] - y[cur], 2) < mid + 1 && !visited[i]) {
+                if (pow(x[i] - x[cur], 2) + pow(y[i] - y[cur], 2) <= mid && !visited[i]) {
                     q.push(i);
                     visited[i] = true;
                 }
