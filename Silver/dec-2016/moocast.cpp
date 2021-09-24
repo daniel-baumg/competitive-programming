@@ -23,17 +23,19 @@ int main() {
     int count[200] = {};
     for (int i = 0; i < n; i++) {
         bool visited[200] = {};
+        visited[i] = true;
         queue<int> q;
         q.push(i);
         while (!q.empty()) {
             int cur = q.front();
             q.pop();
-            if (visited[cur])
-                continue;
-            visited[cur] = true;
             count[i] += 1;
-            for (int v : adj[cur])
-                q.push(v);
+            for (int v : adj[cur]) {
+                if (!visited[v]) {
+                    q.push(v);
+                    visited[v] = true;
+                }
+            }
         }
     }
 
