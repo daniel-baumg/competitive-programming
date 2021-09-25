@@ -19,15 +19,13 @@ int main() {
                 continue;
             bool consistent = true;
             for (int i = 0; i < k; i++) {
-                int idxa = 0;
-                int idxb = 0;
+                int idxA = 0;
+                int idxB = 0;
                 for (int j = 0; j < n; j++) {
-                    if (rankings[i][j] == a + 1)
-                        idxa = j;
-                    if (rankings[i][j] == b + 1)
-                        idxb = j;
+                    if (rankings[i][j] == a + 1) idxA = j;
+                    if (rankings[i][j] == b + 1) idxB = j;
                 }
-                consistent &= idxa < idxb;
+                consistent &= idxA < idxB;
             }
             if (consistent)
                 ans += 1;
