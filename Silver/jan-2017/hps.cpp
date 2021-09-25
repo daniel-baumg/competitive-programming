@@ -11,8 +11,6 @@ int main() {
     h[0] = 0;
     p[0] = 0;
     s[0] = 0;
-    for (int i = 0; i < 100001; i++)
-        cout << h[i] << " ";
     for (int i = 0; i < n; i++) {
         string gesture;
         fin >> gesture;
