@@ -50,7 +50,7 @@ int main() {
                 if (s.size() > 1 || *s.begin() != id)
                     ans += 1;
                 m[id] -= change;
-            } else {
+            } else if (change < 0) {
                 s.erase(id);
                 ans += 1;
             }
