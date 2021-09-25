@@ -8,6 +8,7 @@ int main() {
     int n;
     fin >> n;
     int prefix[50001];
+    prefix[0] = 0;
     for (int i = 0; i < n; i++) {
         int k;
         fin >> k;
