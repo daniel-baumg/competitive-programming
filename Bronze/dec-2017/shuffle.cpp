@@ -12,6 +12,7 @@ int main() {
         fin >> a[i];
     for (int i = 0; i < n; i++)
         fin >> order[i];
+
     for (int i = 0; i < n; i++)
         mapping[a[i] - 1] = i;
     for (int i = 0; i < n; i++)
