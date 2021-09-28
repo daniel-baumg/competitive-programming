@@ -9,9 +9,9 @@ int main() {
     fin >> n >> k >> b;
     bool broken[100001] = {};
     for (int i = 0; i < b; i++) {
-        int crosswalk;
-        fin >> crosswalk;
-        broken[crosswalk] = true;
+        int id;
+        fin >> id;
+        broken[id] = true;
     }
 
     int prefix[100001];
