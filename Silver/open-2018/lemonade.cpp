@@ -7,16 +7,14 @@ int main() {
 
     int n;
     fin >> n;
-    vector<int> cows;
-    for (int i = 0; i < n; i++) {
-        int w;
-        fin >> w;
-        cows.push_back(w);
-    }
-    sort(cows.rbegin(), cows.rend());
-    vector<int> line;
+    int w[100000];
     for (int i = 0; i < n; i++)
-        if (line.size() <= cows[i])
-            line.push_back(cows[i]);
-    fout << line.size() << endl;
+        fin >> w[i];
+    sort(w, w + n);
+
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+        if (ans <= w[n - i - 1])
+            ans += 1;
+    fout << ans << endl;
 }
