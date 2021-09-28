@@ -54,18 +54,18 @@ int main() {
     ofstream fout("tttt.out");
 
     fin >> board[0] >> board[1] >> board[2];
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string cows = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     int ans = 0;
     for (int i = 0; i < 26; i++)
-        if (wins(alphabet[i]))
+        if (wins(cows[i]))
             ans += 1;
     fout << ans << endl;
 
     ans = 0;
     for (int i = 0; i < 26; i++)
         for (int j = i + 1; j < 26; j++)
-            if (wins(alphabet[i], alphabet[j]))
+            if (wins(cows[i], cows[j]))
                 ans += 1;
     fout << ans << endl;
 }
