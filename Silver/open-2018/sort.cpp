@@ -20,7 +20,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int hi = upper_bound(b, b + n, a[i]) - b - 1;
         if (hi <= i)
-            ans = max(ans, abs(hi - i) + 1);
+            ans = max(ans, i - hi + 1);
     }
     fout << ans << endl;
 }
