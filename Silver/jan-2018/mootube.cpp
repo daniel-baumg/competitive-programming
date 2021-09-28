@@ -19,20 +19,21 @@ int main() {
     for (int i = 0; i < q; i++) {
         int k, v;
         fin >> k >> v;
-        bool visited[5000] = {};
         int ans = -1;
+        bool visited[5000] = {};
+        visited[v - 1] = true;
         queue<int> q;
         q.push(v - 1);
         while (!q.empty()) {
             int cur = q.front();
             q.pop();
-            if (visited[cur])
-                continue;
-            visited[cur] = true;
             ans += 1;
-            for (pair<int, int> u : adj[cur])
-                if (u.second >= k)
+            for (auto u : adj[cur]) {
+                if (!visited[u.first] && u.second >= k) {
                     q.push(u.first);
+                    visited[u.first] = true;
+                }
+            }
         }
         fout << ans << endl;
     }
