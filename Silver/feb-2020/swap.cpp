@@ -31,14 +31,14 @@ int main() {
     fin >> n >> m >> k;
     for (int i = 0; i < n; i++)
         mapping[i] = i;
-    for (int i = 0; i < n; i++)
-        id[i] = i;
     for (int i = 0; i < m; i++) {
         int l, r;
         fin >> l >> r;
         reverse(l - 1, r - 1);
     }
 
+    for (int i = 0; i < n; i++)
+        id[i] = i;
     for (int i = 0; i < n; i++)
         merge(i, mapping[i]);
     int len[100000] = {};
