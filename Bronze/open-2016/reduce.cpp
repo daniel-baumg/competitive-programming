@@ -31,7 +31,7 @@ int main() {
         int x2 = 0;
         int y2 = 0;
         for (int j = 0; j < n; j++) {
-            if (j == i)
+            if (i == j)
                 continue;
             x1 = min(x1, x[j]);
             y1 = min(y1, y[j]);
