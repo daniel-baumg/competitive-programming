@@ -25,9 +25,9 @@ int main() {
     int len[100];
     fill_n(len, n, 1);
     for (int i = 0; i < n; i++) {
-        int p = i;
-        while (mapping[p] != i) {
-            p = mapping[p];
+        int idx = i;
+        while (mapping[idx] != i) {
+            idx = mapping[idx];
             len[i] += 1;
         }
     }
