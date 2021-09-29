@@ -13,11 +13,11 @@ int main() {
         fin >> a >> b >> c >> d;
         farm[a + c - 1][b + d - 1] = -1;
     }
-    vector<pair<int, int>> cows;
+    pair<int, int> cows[100];
     for (int i = 0; i < k; i++) {
         int x, y;
         fin >> x >> y;
-        cows.push_back(make_pair(2 * x - 1, 2 * y - 1));
+        cows[i] = make_pair(2 * x - 1, 2 * y - 1);
     }
     for (int i = 0; i < 2 * n + 1; i++) farm[i][0] = -1;
     for (int i = 0; i < 2 * n + 1; i++) farm[0][i] = -1;
@@ -27,7 +27,7 @@ int main() {
         for (int j = 2; j < 2 * n - 1; j += 2)
             farm[i][j] = -1;
 
-    for (int i = 0; i < cows.size(); i++) {
+    for (int i = 0; i < k; i++) {
         queue<pair<int, int>> q;
         q.push(cows[i]);
         while (!q.empty()) {
@@ -46,8 +46,8 @@ int main() {
     }
 
     int ans = 0;
-    for (int i = 0; i < cows.size(); i++)
-        for (int j = i + 1; j < cows.size(); j++)
+    for (int i = 0; i < k; i++)
+        for (int j = i + 1; j < k; j++)
             if (farm[cows[i].first][cows[i].second] != farm[cows[j].first][cows[j].second])
                 ans += 1;
     fout << ans << endl;
