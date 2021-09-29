@@ -27,8 +27,10 @@ void swap(int x, int y) {
 int main() {
     int n, k;
     cin >> n >> k;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         cows[i] = i;
+        s[i].insert(i);
+    }
     for (int i = 0; i < k; i++) {
         int a, b;
         cin >> a >> b;
@@ -40,11 +42,9 @@ int main() {
     for (int i = 0; i < n; i++)
         merge(i, cows[i]);
 
-    for (int i = 0; i < n; i++) {
-        s[i].insert(i);
+    for (int i = 0; i < n; i++)
         for (int v : s[i])
             ans[find(i)].insert(v);
-    }
     for (int i = 0; i < n; i++)
         cout << ans[find(i)].size() << endl;
 }
