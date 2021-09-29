@@ -10,6 +10,7 @@ int main() {
     int x[50000], y[50000], area[50000];
     for (int i = 0; i < n; i++)
         fin >> x[i] >> y[i];
+
     int minx = INT_MAX;
     int miny = INT_MAX;
     int maxx = 0;
