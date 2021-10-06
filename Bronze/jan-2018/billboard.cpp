@@ -16,6 +16,5 @@ int main() {
     if (b2y2 > b1y2 && b2x2 > b1x2 && b2y1 < b1y2 && b2x1 < b1x1) y -= b1y2 - b2y1;
     x = max(x, 0);
     y = max(y, 0);
-
     fout << x * y << endl;
 }
