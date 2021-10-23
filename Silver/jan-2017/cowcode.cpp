@@ -20,11 +20,11 @@ int main() {
 
     long long ans = n;
     while (ans > s.size()) {
-        long long start = idx[upper_bound(idx.begin(), idx.end(), ans) - idx.begin() - 1];
-        if (ans == start)
+        long long cur = idx[upper_bound(idx.begin(), idx.end(), ans) - idx.begin() - 1];
+        if (ans == cur)
             ans -= 1;
         else
-            ans -= start;
+            ans -= cur;
     }
     fout << s[ans - 1] << endl;
 }
