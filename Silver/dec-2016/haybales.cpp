@@ -11,6 +11,7 @@ int main() {
     for (int i = 0; i < n; i++)
         fin >> haybales[i];
     sort(haybales.begin(), haybales.end());
+
     for (int i = 0; i < q; i++) {
         int a, b;
         fin >> a >> b;
