@@ -19,7 +19,7 @@ int main() {
     priority_queue<int> waiting;
     while (!pq.empty()) {
         time = max(time, -1 * pq.top().first);
-        update_waiting:
+        update:
             while (!pq.empty() && time >= -1 * pq.top().first) {
                 waiting.push(-1 * pq.top().second);
                 pq.pop();
@@ -29,7 +29,7 @@ int main() {
             waiting.pop();
             eat[cur] = time;
             time += t[cur];
-            goto update_waiting;
+            goto update;
         }
     }
 
