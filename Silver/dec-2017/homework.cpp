@@ -11,9 +11,9 @@ int main() {
     for (int i = 0; i < n; i++)
         fin >> scores[i];
 
-    vector<double> avg;
     double sum = scores[n - 1];
     int min_score = scores[n - 1];
+    vector<double> avg;
     for (int i = n - 2; i > 0; i--) {
         sum += scores[i];
         min_score = min(min_score, scores[i]);
