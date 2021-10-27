@@ -6,10 +6,8 @@ int main() {
     ofstream fout("backforth.out");
 
     vector<int> barn1(10), barn2(10);
-    for (int i = 0; i < 10; i++)
-        fin >> barn1[i];
-    for (int i = 0; i < 10; i++)
-        fin >> barn2[i];
+    for (int i = 0; i < 10; i++) fin >> barn1[i];
+    for (int i = 0; i < 10; i++) fin >> barn2[i];
 
     bool possible[2000] = {};
     for (int a = 0; a < 10; a++) {
