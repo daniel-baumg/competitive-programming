@@ -54,8 +54,8 @@ int main() {
                 cur -= 1;
             }
             ans += cents;
-            i -= 1;
             n -= 1;
+            i--;
         } else {
             ans += pq.top();
             pq.pop();
