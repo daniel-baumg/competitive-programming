@@ -20,6 +20,6 @@ int main() {
             ans[j] += max(blocks1[j], blocks2[j]);
     }
 
-    for (int i = 0; i < 26; i++)
-        fout << ans[i] << endl;
+    for (int i : ans)
+        fout << i << endl;
 }
