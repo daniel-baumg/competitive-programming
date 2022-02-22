@@ -2,7 +2,7 @@
 using namespace std;
 
 bool lit[100][100], toggled[100][100];
-multimap<pair<int, int>, pair<int, int>> mm;
+map<pair<int, int>, vector<pair<int, int>>> mm;
 
 bool illuminate(int n) {
     bool result = false;
@@ -18,9 +18,8 @@ bool illuminate(int n) {
             continue;
         visited[cur.first][cur.second] = true;
         if (!toggled[cur.first][cur.second]) {
-            auto it = mm.equal_range(cur);
-            for (auto itr = it.first; itr != it.second; itr++)
-                lit[itr -> second.first][itr -> second.second] = true;
+            for (auto p : mm[cur])
+                lit[p.first][p.second] = true;
             toggled[cur.first][cur.second] = true;
             result = true;
         }
@@ -41,7 +40,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         int x, y, a, b;
         fin >> x >> y >> a >> b;
-        mm.insert(make_pair(make_pair(x - 1, y - 1), make_pair(a - 1, b - 1)));
+        mm[make_pair(x - 1, y - 1)].push_back(make_pair(a - 1, b - 1));
     }
 
     lit[0][0] = true;
