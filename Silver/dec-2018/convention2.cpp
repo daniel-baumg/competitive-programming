@@ -11,7 +11,7 @@ int main() {
     priority_queue<pair<int, int>> pq;
     for (int i = 0; i < n; i++) {
         fin >> a[i] >> t[i];
-        pq.push(make_pair(-1 * a[i], i));
+        pq.push({-1 * a[i], i});
     }
 
     int time = 0;
