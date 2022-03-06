@@ -12,7 +12,7 @@ int main() {
     for (int i = 0; i < t; i++) {
         int time, x, y;
         fin >> time >> x >> y;
-        log.push_back(make_tuple(time, x - 1, y - 1));
+        log.push_back({time, x - 1, y - 1});
     }
     sort(log.begin(), log.end());
 
