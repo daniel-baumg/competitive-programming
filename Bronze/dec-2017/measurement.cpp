@@ -12,7 +12,7 @@ int main() {
         int day, change;
         string cow;
         fin >> day >> cow >> change;
-        log.push_back(make_tuple(day, cow, change));
+        log.push_back({day, cow, change});
     }
     sort(log.begin(), log.end());
 
