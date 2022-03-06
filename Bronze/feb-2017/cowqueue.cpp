@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int arrival, duration;
         fin >> arrival >> duration;
-        cows.push_back(make_pair(arrival, duration));
+        cows.push_back({arrival, duration});
     }
     sort(cows.begin(), cows.end());
 
