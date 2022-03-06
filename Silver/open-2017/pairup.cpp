@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int x, y;
         fin >> x >> y;
-        cows[i] = make_pair(y, x);
+        cows[i] = {y, x};
     }
     sort(cows, cows + n);
 
