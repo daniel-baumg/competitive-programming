@@ -17,12 +17,14 @@ int main() {
     for (int i = 0; i < k; i++) {
         int x, y;
         fin >> x >> y;
-        cows[i] = make_pair(2 * x - 1, 2 * y - 1);
+        cows[i] = {2 * x - 1, 2 * y - 1};
     }
-    for (int i = 0; i < 2 * n + 1; i++) farm[i][0] = -1;
-    for (int i = 0; i < 2 * n + 1; i++) farm[0][i] = -1;
-    for (int i = 0; i < 2 * n + 1; i++) farm[i][2 * n] = -1;
-    for (int i = 0; i < 2 * n + 1; i++) farm[2 * n][i] = -1;
+    for (int i = 0; i < 2 * n + 1; i++) {
+        farm[i][0] = -1;
+        farm[0][i] = -1;
+        farm[i][2 * n] = -1;
+        farm[2 * n][i] = -1;
+    }
     for (int i = 2; i < 2 * n - 1; i += 2)
         for (int j = 2; j < 2 * n - 1; j += 2)
             farm[i][j] = -1;
@@ -38,10 +40,10 @@ int main() {
             if (farm[cur.first][cur.second] != 0)
                 continue;
             farm[cur.first][cur.second] = i + 1;
-            q.push(make_pair(cur.first + 1, cur.second));
-            q.push(make_pair(cur.first - 1, cur.second));
-            q.push(make_pair(cur.first, cur.second + 1));
-            q.push(make_pair(cur.first, cur.second - 1));
+            q.push({cur.first + 1, cur.second});
+            q.push({cur.first - 1, cur.second});
+            q.push({cur.first, cur.second + 1});
+            q.push({cur.first, cur.second - 1});
         }
     }
 
