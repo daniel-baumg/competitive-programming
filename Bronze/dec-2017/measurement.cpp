@@ -21,13 +21,10 @@ int main() {
     milk["Bessie"] = 7;
     milk["Elsie"] = 7;
     milk["Mildred"] = 7;
-    set<string> display;
-    display.insert("Bessie");
-    display.insert("Elsie");
-    display.insert("Mildred");
+    set<string> display = {"Bessie", "Elsie", "Mildred"};
     for (int i = 0; i < n; i++) {
         milk[get<1>(log[i])] += get<2>(log[i]);
-        int max_milk = max(max(milk["Bessie"], milk["Elsie"]), milk["Mildred"]);
+        int max_milk = max({milk["Bessie"], milk["Elsie"], milk["Mildred"]});
         set<string> updated_display;
         if (milk["Bessie"] == max_milk)
             updated_display.insert("Bessie");
