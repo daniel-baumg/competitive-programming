@@ -12,8 +12,8 @@ int main() {
     for (int i = 0; i < n - 1; i++) {
         int p, q, r;
         fin >> p >> q >> r;
-        adj[p - 1].push_back(make_pair(q - 1, r));
-        adj[q - 1].push_back(make_pair(p - 1, r));
+        adj[p - 1].push_back({q - 1, r});
+        adj[q - 1].push_back({p - 1, r});
     }
 
     for (int i = 0; i < q; i++) {
