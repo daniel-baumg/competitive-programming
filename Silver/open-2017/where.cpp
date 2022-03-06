@@ -55,7 +55,7 @@ int main() {
                         }
                     }
                     if ((roots[0] == 1 && roots[1] > 1) || (roots[1] == 1 && roots[0] > 1))
-                        pcl.insert(make_pair(make_pair(x1, y1), make_pair(x2, y2)));
+                        pcl.insert({{x1, y1}, {x2, y2}});
                 }
             }
         }
