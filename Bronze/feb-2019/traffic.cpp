@@ -12,7 +12,7 @@ int main() {
         string type;
         int a, b;
         fin >> type >> a >> b;
-        traffic.push_back(make_tuple(type[1] == 'n', type[1] == 'f', type[1] == 'o', a, b));
+        traffic.push_back({type[1] == 'n', type[1] == 'f', type[1] == 'o', a, b});
     }
 
     int idx1, idx2, lo, hi;
