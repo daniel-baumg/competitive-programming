@@ -8,7 +8,7 @@ bool illuminate(int n) {
     bool result = false;
     bool visited[100][100] = {};
     queue<pair<int, int>> q;
-    q.push(make_pair(0, 0));
+    q.push({0, 0});
     while (!q.empty()) {
         auto cur = q.front();
         q.pop();
@@ -23,10 +23,10 @@ bool illuminate(int n) {
             toggled[cur.first][cur.second] = true;
             result = true;
         }
-        q.push(make_pair(cur.first + 1, cur.second));
-        q.push(make_pair(cur.first - 1, cur.second));
-        q.push(make_pair(cur.first, cur.second + 1));
-        q.push(make_pair(cur.first, cur.second - 1));
+        q.push({cur.first + 1, cur.second});
+        q.push({cur.first - 1, cur.second});
+        q.push({cur.first, cur.second + 1});
+        q.push({cur.first, cur.second - 1});
     }
     return result;
 }
@@ -40,7 +40,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         int x, y, a, b;
         fin >> x >> y >> a >> b;
-        mm[make_pair(x - 1, y - 1)].push_back(make_pair(a - 1, b - 1));
+        mm[{x - 1, y - 1}].push_back({a - 1, b - 1});
     }
 
     lit[0][0] = true;
