@@ -20,7 +20,7 @@ int main() {
             int a = 0;
             int p = 0;
             queue<pair<int, int>> q;
-            q.push(make_pair(i, j));
+            q.push({i, j});
             while (!q.empty()) {
                 auto cur = q.front();
                 q.pop();
@@ -32,10 +32,10 @@ int main() {
                     continue;
                 visited[cur.first][cur.second] = true;
                 a += 1;
-                q.push(make_pair(cur.first + 1, cur.second));
-                q.push(make_pair(cur.first - 1, cur.second));
-                q.push(make_pair(cur.first, cur.second + 1));
-                q.push(make_pair(cur.first, cur.second - 1));
+                q.push({cur.first + 1, cur.second});
+                q.push({cur.first - 1, cur.second});
+                q.push({cur.first, cur.second + 1});
+                q.push({cur.first, cur.second - 1});
             }
             if (a == ans[0])
                 ans[1] = min(ans[1], p);
