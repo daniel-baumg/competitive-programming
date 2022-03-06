@@ -18,7 +18,7 @@ int main() {
         bool visited[100] = {};
         visited[i] = true;
         queue<pair<int, int>> q;
-        q.push(make_pair(x[i], 1));
+        q.push({x[i], 1});
         while (!q.empty()) {
             int cow = q.front().first;
             int radius = q.front().second;
@@ -26,7 +26,7 @@ int main() {
             count += 1;
             for (int j = 0; j < n; j++) {
                 if (!visited[j] && cow - radius <= x[j] && x[j] <= cow + radius) {
-                    q.push(make_pair(x[j], radius + 1));
+                    q.push({x[j], radius + 1});
                     visited[j] = true;
                 }
             }
