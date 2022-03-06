@@ -27,7 +27,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         long long a, b;
         fin >> a >> b;
-        intervals.push_back(make_pair(a, b));
+        intervals.push_back({a, b});
     }
     sort(intervals.begin(), intervals.end());
 
