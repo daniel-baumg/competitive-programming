@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         int p, q;
         fin >> p >> q;
-        buy.push_back(make_pair(q, p));
+        buy.push_back({q, p});
     }
     sort(buy.begin(), buy.end());
 
