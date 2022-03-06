@@ -15,7 +15,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int day, id, change;
         fin >> day >> id >> change;
-        measurements.push_back(make_tuple(day, id, change));
+        measurements.push_back({day, id, change});
         m[id] = g;
         s.insert(id);
     }
