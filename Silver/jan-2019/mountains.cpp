@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int x, y;
         fin >> x >> y;
-        v.push_back(make_pair(x - y, x + y));
+        v.push_back({x - y, x + y});
     }
     sort(v.begin(), v.end());
 
