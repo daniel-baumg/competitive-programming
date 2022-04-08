@@ -12,7 +12,7 @@ int main() {
         fin >> haybales[i];
     sort(haybales.begin(), haybales.end());
 
-    for (int i = 0; i < q; i++) {
+    while (q--) {
         int a, b;
         fin >> a >> b;
         fout << upper_bound(haybales.begin(), haybales.end(), b) - lower_bound(haybales.begin(), haybales.end(), a) << endl;
