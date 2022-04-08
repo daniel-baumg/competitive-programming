@@ -16,7 +16,7 @@ int main() {
         adj[q - 1].push_back({p - 1, r});
     }
 
-    for (int i = 0; i < q; i++) {
+    while (q--) {
         int k, v;
         fin >> k >> v;
         int ans = -1;
