@@ -17,7 +17,7 @@ int main() {
         prefix[i + 1][k - 1] += 1;
     }
 
-    for (int i = 0; i < q; i++) {
+    while (q--) {
         int a, b;
         fin >> a >> b;
         fout << prefix[b][0] - prefix[a - 1][0] << " ";
