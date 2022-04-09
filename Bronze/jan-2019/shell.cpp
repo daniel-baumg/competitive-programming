@@ -22,5 +22,5 @@ int main() {
         if (pebble[1][guess - 1]) ans[1] += 1;
         if (pebble[2][guess - 1]) ans[2] += 1;
     }
-    fout << max(max(ans[0], ans[1]), ans[2]) << endl;
+    fout << max({ans[0], ans[1], ans[2]}) << endl;
 }
