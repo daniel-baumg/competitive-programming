@@ -13,8 +13,8 @@ int main() {
         fin >> card;
         elsie[card] = true;
     }
-    vector<int> e;
-    vector<int> b;
+
+    vector<int> e, b;
     for (int i = 1; i <= 2 * n; i++) {
         if (elsie[i])
             e.push_back(i);
