@@ -7,15 +7,14 @@ int main() {
     cin >> s >> t >> q;
 
     map<pair<char, char>, bool> m;
-    string a = "abcdefghijklmnopqr";
-    for (int i = 0; i < 20; i++) {
-        for (int j = i; j < 20; j++) {
+    string alphabet = "abcdefghijklmnopqr";
+    for (char c1 : alphabet) {
+        for (char c2 : alphabet) {
             string ss = "";
             string tt = "";
-            for (char c : s) if (c == a[i] || c == a[j]) ss += c;
-            for (char c : t) if (c == a[i] || c == a[j]) tt += c;
-            m[{a[i], a[j]}] = ss == tt;
-            m[{a[j], a[i]}] = ss == tt;
+            for (char c : s) if (c == c1 || c == c2) ss += c;
+            for (char c : t) if (c == c1 || c == c2) tt += c;
+            m[{c1, c2}] = ss == tt;
         }
     }
 
@@ -24,9 +23,9 @@ int main() {
         string k;
         cin >> k;
         bool valid = true;
-        for (int i = 0; i < k.size(); i++)
-            for (int j = i; j < k.size(); j++)
-                valid &= m[{k[i], k[j]}];
+        for (char c1 : k)
+            for (char c2 : k)
+                valid &= m[{c1, c2}];
         if (valid)
             ans += 'Y';
         else
