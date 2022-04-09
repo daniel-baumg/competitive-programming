@@ -11,7 +11,7 @@ int m(int n, int cowx, int cowy) {
         if (x[cow] > cowx && y[cow] < cowy) regions[2] += 1;
         if (x[cow] > cowx && y[cow] > cowy) regions[3] += 1;
     }
-    return max(max(regions[0], regions[1]), max(regions[2], regions[3]));
+    return max({regions[0], regions[1], regions[2], regions[3]});
 }
 
 int main() {
