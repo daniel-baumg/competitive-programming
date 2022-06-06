@@ -38,19 +38,19 @@ int main() {
                             cur += 1;
                         }
                     }
-                    int mxx = 0;
-                    int mxy = 0;
-                    int mnx = 50000;
-                    int mny = 50000;
+                    int maxx = 0;
+                    int maxy = 0;
+                    int minx = 50000;
+                    int miny = 50000;
                     for (int i = 0; i < n; i++) {
                         if (s.count(i) == 0) {
-                            mxx = max(mxx, x[i]);
-                            mxy = max(mxy, y[i]);
-                            mnx = min(mnx, x[i]);
-                            mny = min(mny, y[i]);
+                            maxx = max(maxx, x[i]);
+                            maxy = max(maxy, y[i]);
+                            minx = min(minx, x[i]);
+                            miny = min(miny, y[i]);
                         }
                     }
-                    ans = min(ans, (mxx - mnx) * (mxy - mny));
+                    ans = min(ans, (maxx - minx) * (maxy - miny));
                 }
             }
         }
