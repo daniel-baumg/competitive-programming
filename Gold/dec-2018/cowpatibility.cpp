@@ -9,11 +9,11 @@ int main() {
     ifstream fin("cowpatibility.in");
     ofstream fout("cowpatibility.out");
 
-    long long n;
+    int n;
     fin >> n;
-    long long a[n][5];
-    unordered_map<long long, long long> m1, m2, m3;
-    map<pair<long long, long long>, long long> m4, m5;
+    int a[n][5];
+    unordered_map<long long, int> m1, m2, m3;
+    map<pair<long long, long long>, int> m4, m5;
     for (int i = 0; i < n; i++) {
         fin >> a[i][0] >> a[i][1] >> a[i][2] >> a[i][3] >> a[i][4];
         sort(a[i], a[i] + 5);
@@ -50,9 +50,9 @@ int main() {
         m5[{id(a[i][0], a[i][1], a[i][2]), id(a[i][3], a[i][4])}] += 1;
     }
 
-    long long ans = 0;
+    int ans = 0;
     for (int i = 0; i < n; i++) {
-        long long valid = 0;
+        int valid = 0;
         valid += m1[a[i][0]];
         valid += m1[a[i][1]];
         valid += m1[a[i][2]];
