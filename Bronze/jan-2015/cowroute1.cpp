@@ -21,7 +21,7 @@ int main() {
             if (route[i] == a) idxa = i;
             if (route[i] == b) idxb = i;
         }
-        if (idxa >= 0 && idxa < idxb) {
+        if (0 <= idxa && idxa < idxb) {
             if (ans < 0)
                 ans = cost;
             else
