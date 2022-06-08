@@ -2,9 +2,6 @@
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-
     int n;
     string s[4];
     cin >> n >> s[0] >> s[1] >> s[2] >> s[3];
