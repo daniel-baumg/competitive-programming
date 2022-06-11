@@ -7,9 +7,8 @@ int main() {
     cin >> s >> t >> q;
 
     map<pair<char, char>, bool> m;
-    string alphabet = "abcdefghijklmnopqr";
-    for (char c1 : alphabet) {
-        for (char c2 : alphabet) {
+    for (char c1 : "abcdefghijklmnopqr") {
+        for (char c2 : "abcdefghijklmnopqr") {
             string ss = "";
             string tt = "";
             for (char c : s) if (c == c1 || c == c2) ss += c;
