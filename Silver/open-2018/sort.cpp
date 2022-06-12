@@ -7,13 +7,11 @@ int main() {
 
     int n;
     fin >> n;
-    int a[100000];
-    for (int i = 0; i < n; i++)
+    int a[n], b[n];
+    for (int i = 0; i < n; i++) {
         fin >> a[i];
-
-    int b[100000];
-    for (int i = 0; i < n; i++)
         b[i] = a[i];
+    }
     sort(b, b + n);
 
     int ans = 0;
