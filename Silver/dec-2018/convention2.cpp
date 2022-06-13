@@ -11,21 +11,21 @@ int main() {
     priority_queue<pair<int, int>> pq;
     for (int i = 0; i < n; i++) {
         fin >> a[i] >> t[i];
-        pq.push({-1 * a[i], i});
+        pq.push({-a[i], i});
     }
 
     int time = 0;
     int eat[100000];
     priority_queue<int> waiting;
     while (!pq.empty()) {
-        time = max(time, -1 * pq.top().first);
+        time = max(time, -pq.top().first);
         update:
-            while (!pq.empty() && time >= -1 * pq.top().first) {
-                waiting.push(-1 * pq.top().second);
+            while (!pq.empty() && time >= -pq.top().first) {
+                waiting.push(-pq.top().second);
                 pq.pop();
             }
         while (!waiting.empty()) {
-            int cur = -1 * waiting.top();
+            int cur = -waiting.top();
             waiting.pop();
             eat[cur] = time;
             time += t[cur];
